@@ -1,0 +1,10 @@
+.wrapper.dark {
+    --background-color: rgb(72, 72, 72);
+    --text-color: white;
+    --button-back: rgb(125, 125, 125);
+    --button-text: white;
+    --title-color: white;
+    --th-color:black;
+    --select-background:rgb(178, 178, 178);
+    --select-color: black;
+}

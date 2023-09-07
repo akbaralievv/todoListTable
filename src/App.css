@@ -1,0 +1,311 @@
+/* Импорты */
+@import './theme/theme_color/dark.css';
+@import './theme/theme_color/light.css';
+
+/* Общий контейнер */
+.wrapper {
+    display: flex;
+    height: 100vh;
+    gap: 19px;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    position: relative;
+}
+
+/* Модальное окно */
+.modal {
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    z-index: 4;
+    background-color: rgba(180, 180, 180, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стиль строки модального окна */
+.modal-row {
+    background-color: var(--background-color);
+}
+
+/* Создание строки */
+.create-row {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid rgb(178, 178, 178);
+    border-radius: 4px;
+    width: 300px;
+    padding: 10px;
+    gap: 20px;
+    height: auto;
+}
+
+.create-row>p {
+    position: absolute;
+    top: -11px;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.create-row>span {
+    cursor: pointer;
+}
+
+.create-row>form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.create-row>form input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border: 1px solid rgb(178, 178, 178);
+    border-radius: 4px;
+    padding: 0 5px 0 5px;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.inputs-form,
+.buttons-change {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+span {
+    color: var(--text-color);
+}
+
+.create-row .buttons {
+    height: 30px;
+    border: none;
+    outline: none;
+    background: rgb(178, 178, 178);
+    color: black;
+    border-radius: 4px;
+}
+
+.create-row .buttons:hover {
+    background-color: rgb(144, 143, 143);
+}
+
+.create-row .buttons:active {
+    background: rgb(178, 178, 178);
+}
+
+.toggle-theme {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Стили для переключателей (Switch) и чекбоксов (Checkbox) */
+/* Настройки для скроллбара в таблице */
+.table-body::-webkit-scrollbar {
+    width: 7px;
+    background-color: #ccc;
+}
+
+.table-body::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 113, 0);
+}
+
+.table-body::-webkit-scrollbar-thumb:hover {
+    background-color: green;
+}
+
+.table-body::-webkit-scrollbar-thumb:active {
+    background-color: rgb(0, 113, 0);
+}
+
+/* Остальные стили таблицы и элементов */
+.table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 392px;
+    max-height: 392px;
+    padding: 10px;
+    border: 1px solid rgb(178, 178, 178);
+    border-radius: 4px;
+}
+
+.table-header,
+.table-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-header {
+    background-color: var(--select-background);
+    font-weight: bold;
+}
+
+.table-header th,
+.table-body td {
+    flex: 1;
+    display: table-cell;
+    padding: 1px;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+}
+
+.table-header th {
+    color: var(--th-color);
+}
+
+.null {
+    height: 342px;
+    position: relative;
+    width: 100%;
+}
+
+.null>p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.table-body {
+    overflow-y: auto;
+    max-height: 382px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.selected-row {
+    background-color: var(--select-background);
+}
+
+.selected-row td {
+    color: var(--select-color);
+}
+
+.input-number {
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    width: 60px;
+    top: 0;
+    right: 0;
+    height: 30px;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+}
+
+.arrow div {
+    background-color: #ccc;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.arrow div:last-child {
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid white;
+}
+
+.arrow div:last-child img {
+    transform: rotate(180deg);
+}
+
+.arrow img {
+    width: 15px;
+}
+
+.select {
+    position: relative;
+}
+
+.select-input {
+    position: relative;
+}
+
+.select-input input {
+    cursor: pointer;
+}
+
+.select-input div {
+    position: absolute;
+    background-color: #ccc;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 30px;
+    top: 0;
+    right: 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.select-input img {
+    width: 15px;
+}
+
+.select ul {
+    position: absolute;
+    z-index: 2;
+    list-style: none;
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+.select ul li:hover {
+    background-color: green;
+}
+
+:where(.css-dev-only-do-not-override-nnuwmp).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled),
+:where(.css-dev-only-do-not-override-nnuwmp).ant-switch,
+:where(.css-dev-only-do-not-override-nnuwmp).ant-switch:hover:not(.ant-switch-disabled),
+:where(.css-dev-only-do-not-override-nnuwmp).ant-checkbox-checked .ant-checkbox-inner,
+:where(.css-dev-only-do-not-override-nnuwmp).ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover .ant-checkbox-checked:not(.ant-checkbox-disabled) .ant-checkbox-inner,
+:where(.css-dev-only-do-not-override-nnuwmp).ant-switch.ant-switch-checked {
+    background-color: green;
+}
+
+:where(.css-dev-only-do-not-override-nnuwmp).ant-switch .ant-switch-handle::before {
+    background-color: var(--background-color);
+}
+
+:where(.css-dev-only-do-not-override-nnuwmp).ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover .ant-checkbox-inner,
+:where(.css-dev-only-do-not-override-nnuwmp).ant-checkbox:not(.ant-checkbox-disabled):hover .ant-checkbox-inner,
+:where(.css-dev-only-do-not-override-nnuwmp).ant-checkbox-checked .ant-checkbox-inner {
+    border-color: green
+}
+
+:where(.css-dev-only-do-not-override-nnuwmp).ant-checkbox .ant-checkbox-inner {
+    /* background: transparent; */
+    width: 20px;
+    height: 20px;
+    border: 1px solid green
+}
+
+:where(.css-dev-only-do-not-override-nnuwmp).ant-checkbox .ant-checkbox-inner:after {
+    top: 46%;
+    left: 29%;
+    width: 6px;
+    height: 10px;
+
+}

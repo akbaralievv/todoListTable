@@ -1,0 +1,10 @@
+.wrapper.light {
+    --background-color: white;
+    --text-color: black;
+    --button-back: rgb(125, 125, 125);
+    --button-text: white;
+    --title-color: white;
+    --th-color: black;
+    --select-background: #f0f0f0;
+    --select-color: black;
+}
